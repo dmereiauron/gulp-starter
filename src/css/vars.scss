@@ -1,0 +1,22 @@
+$columns: 12;
+$offset: 30px;
+$offset_one_side: $offset / 2;
+
+$color_green: #1c9d74;
+$color_black: #000;
+$color_white: #fff;
+$color_dark: #71726c;
+$color_middle: #9a9a9a;
+
+$path_img: '../img/';
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -$offset_one_side;
+}
+
+@mixin size($n, $c: $columns, $o: $offset) {
+  $w: 100% / $c * $n;
+  width: calc($w - $o);
+}
